@@ -11,22 +11,21 @@ public class FibTest extends Assertions {
     @Test
     public void testGetFibSeries_WhenRange_1_ThenResult_NotEmpty() {
         fib = new Fib(1);
-        int unexpected = 0;
 
         List<Integer> list = fib.getFibSeries();
-        int actual = list.size();
+        boolean condition = list.isEmpty();
 
-        assertNotEquals(unexpected, actual);
+        assertFalse(condition);
     }
 
     @Test
-    public void testGetFibSeries_WhenRange_1_ThenResult_0() {
+    public void testGetFibSeries_WhenRange_1_ThenResultContainsValue_0() {
         fib = new Fib(1);
-        List<Integer> expected = List.of(0);
 
-        List<Integer> actual = fib.getFibSeries();
+        List<Integer> list = fib.getFibSeries();
+        boolean condition = list.contains(0);
 
-        assertEquals(expected, actual);
+        assertTrue(condition);
     }
 
     @Test

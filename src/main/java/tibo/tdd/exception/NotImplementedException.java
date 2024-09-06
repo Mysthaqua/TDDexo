@@ -1,4 +1,4 @@
-package tibo.tdd.exo4.exception;
+package tibo.tdd.exception;
 
 public class NotImplementedException extends RuntimeException {
     public NotImplementedException() {

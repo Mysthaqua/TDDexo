@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
-import tibo.tdd.exo4.exception.NotFoundException;
+import tibo.tdd.exception.NotFoundException;
 
 import java.util.List;
 

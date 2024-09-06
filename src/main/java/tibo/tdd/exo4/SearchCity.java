@@ -1,6 +1,6 @@
 package tibo.tdd.exo4;
 
-import tibo.tdd.exo4.exception.NotFoundException;
+import tibo.tdd.exception.NotFoundException;
 
 import java.util.List;
 

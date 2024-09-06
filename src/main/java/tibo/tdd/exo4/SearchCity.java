@@ -12,6 +12,7 @@ public class SearchCity {
     }
 
     public List<String> search(String city) {
+        if (city.equals("*")) return cities;
         if (city.length() < 2) throw new NotFoundException();
 
         return cities.stream().filter(cityName -> cityName.toLowerCase().contains(city.toLowerCase())).toList();

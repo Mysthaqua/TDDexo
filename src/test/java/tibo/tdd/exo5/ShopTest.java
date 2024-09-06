@@ -39,10 +39,22 @@ public class ShopTest extends Assertions {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testShop_WhenUpdate_IfProductQuality_0_ThenProductQuality_0() {
+        int quality = 0;
+        product.setQuality(quality);
+        int expected = 0;
+
+        shop.update(product);
+        int actual = product.getQuality();
+
+        assertEquals(expected, actual);
+    }
 }
 
 /*
-Une fois la date de péremption est à zéro, la qualité se dégrade deux fois plus vite.
+    Une fois la date de péremption est à zéro, la qualité se dégrade deux fois plus vite.
 La qualité d'un article n'est jamais négative.
 La qualité d'un article n'est jamais supérieure à 50.
 La qualité du « brie vieilli » augmente à mesure qu'il vieillit.

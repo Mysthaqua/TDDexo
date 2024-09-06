@@ -49,4 +49,15 @@ public class SearchCityTest extends Assertions {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("Test de la méthode search de la classe SearchCity, avec city = \"ape\", renvoie une liste contenant Budapest")
+    public void testSearchCity_WhenSearch_IfCity_ape_ReturnsList_Budapest() {
+        String city = "ape";
+        List<String> expected = List.of("Budapest");
+
+        List<String> actual = searchCity.search(city);
+
+        assertEquals(expected, actual);
+    }
 }

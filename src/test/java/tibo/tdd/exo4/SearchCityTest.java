@@ -60,4 +60,15 @@ public class SearchCityTest extends Assertions {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("Test de la méthode search de la classe SearchCity, avec city = \"*\", renvoie une liste contenant toutes les villes")
+    public void testSearchCity_WhenSearch_IfCity_Wildcard_ReturnsCities() {
+        String city = "*";
+        List<String> expected = List.of("Paris", "Budapest", "Skopje", "Rotterdam", "Valence", "Vancouver", "Amsterdam", "Vienne", "Sydney", "New York", "Londres", "Bangkok", "Hong Kong", "Dubaï", "Rome", "Istanbul");
+
+        List<String> actual = searchCity.search(city);
+
+        assertEquals(expected, actual);
+    }
 }

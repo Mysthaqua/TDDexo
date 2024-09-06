@@ -27,4 +27,15 @@ public class SearchCityTest extends Assertions {
 
         assertThrows(expectedType, executable);
     }
+
+    @Test
+    @DisplayName("Test de la méthode search de la classe SearchCity, avec city = \"Va\", renvoie une liste contenant Valence et Vancouver")
+    public void testSearchCity_WhenSearch_IfCity_Va_ReturnsList_Valence_Vancouver() {
+        String city = "Va";
+        List<String> expected = List.of("Valence", "Vancouver");
+
+        List<String> actual = searchCity.search(city);
+
+        assertEquals(expected, actual);
+    }
 }

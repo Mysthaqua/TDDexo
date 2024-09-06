@@ -11,6 +11,9 @@ public class Shop {
     }
 
     public void update(Product product) {
+        if (product.getQuality() > 50) {
+            product.setQuality(50);
+        }
         if (product.getQuality() > 0) {
             product.setQuality(product.getQuality() - 1);
         }

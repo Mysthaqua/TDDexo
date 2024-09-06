@@ -13,12 +13,13 @@ public class Shop {
     }
 
     public void update(Product product) {
-        if (product.getSellIn() == 0) {
-            product.setQuality(product.getQuality() / 2);
-            return;
-        }
+        product.setQuality(product.getQuality() - 1);
 
-        throw new NotImplementedException();
+        if (product.getSellIn() > 0) {
+            product.setSellIn(product.getSellIn() - 1);
+        } else {
+            product.setQuality(product.getQuality() - 1);
+        }
     }
 
     public List<Product> getProducts() {

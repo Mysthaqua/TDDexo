@@ -27,12 +27,12 @@ public class ShopTest extends Assertions {
     }
 
     @Test
-    public void testShop_WhenUpdate_IfProductQuality_50_AndProductSellIn_0_ThenProductQuality_25() {
-        int quality = 50;
+    public void testShop_WhenUpdate_IfProductQuality_10_AndProductSellIn_0_ThenProductQuality_8() {
+        int quality = 10;
         product.setQuality(quality);
         int sellIn = 0;
         product.setSellIn(sellIn);
-        int expected = 25;
+        int expected = 8;
 
         shop.update(product);
         int actual = product.getQuality();
@@ -40,3 +40,11 @@ public class ShopTest extends Assertions {
         assertEquals(expected, actual);
     }
 }
+
+/*
+Une fois la date de péremption est à zéro, la qualité se dégrade deux fois plus vite.
+La qualité d'un article n'est jamais négative.
+La qualité d'un article n'est jamais supérieure à 50.
+La qualité du « brie vieilli » augmente à mesure qu'il vieillit.
+Les produits laitiers se dégradent en qualité deux fois plus vite que les produits normaux
+ */

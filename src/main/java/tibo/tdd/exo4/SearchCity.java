@@ -1,7 +1,6 @@
 package tibo.tdd.exo4;
 
 import tibo.tdd.exo4.exception.NotFoundException;
-import tibo.tdd.exo4.exception.NotImplementedException;
 
 import java.util.List;
 
@@ -15,6 +14,6 @@ public class SearchCity {
     public List<String> search(String city) {
         if (city.length() < 2) throw new NotFoundException();
 
-        throw new NotImplementedException();
+        return cities.stream().filter(cityName -> cityName.contains(city)).toList();
     }
 }
